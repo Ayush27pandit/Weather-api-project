@@ -1,0 +1,180 @@
+:root {
+    --bg_main: #0a1f44;
+    --text_light: #fff;
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+  }
+  
+  a{
+    color: inherit;
+    text-decoration:none ;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  button,input{
+    border: 0;
+    background: none;
+    outline: none;
+  }
+
+  img{
+    display: block;
+    max-width: 100%;
+    height:auto;
+  }
+
+  ul{
+    list-style: none;
+  }
+  
+  body{
+    font: 1rem/1.3 "Roberto",sans-serif;
+    background: var(--bg_main);
+    color: var(--text_dark);
+    padding: 70px;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 15px;
+
+  }
+
+
+
+  .top-banner{
+    color:var(--text_light);
+  }
+
+  .heading{
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02cm;
+    padding: 0 0 30px 0;
+  }
+
+  .top-banner form{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-banner form input{
+    font-size: 2rem;
+    color: var(--text_light);
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+
+
+  }
+
+  .top-banner form input::placeholder{
+    color: currentColor;
+  }
+
+  .top-banner form button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1cm;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    color: var(--text_light);
+    transition: background 0.3s ease-in-out;
+  }
+
+  .top-banner form button:hover{
+    background: var(--darkred);
+  }
+  .top-banner form .message{
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+  }
+
+  /*Event section*/
+  
+  .weather-section{
+    margin: 70px 0 20px;
+  }
+
+  .weather-section .cities{
+    display: grid;
+    grid-gap: 32px 21px;
+    grid-template-columns: repeat(4,1fr);
+
+  }
+
+  .weather-section .city{
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+  }
+
+  .weather-section .city::after{
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 20px;
+    background: var(--text_light);
+  }
+
+  .weather-section figcaption{
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05cm;
+
+  }
+
+  .weather-section .city-temp{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color:var(--text_dark)
+
+  }
+
+  .weather-section .city sup{
+    font-size: 0.5rem;
+
+  }
+
+  .weather-section .city-name sup{
+    padding: 0.2cm 0.6cm;
+    border-radius: 27px;
+    color: var(--text_light);
+    background: var(--orange);
+  }
+
+  .weather-section .city-icon{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    
+  }
